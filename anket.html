@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Survey</h1>
+        <form id="survey-form">
+            <label for="name"> Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Age group:</label>
+            <select id="age-group" name="age-group">
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55+">55+</option>
+            </select>
+
+            <label>Which topics are you interested in?</label>
+            <input type="checkbox" id="tech" name="interests" value="Teknoloji">
+            <label for="tech">Tecnohogy</label><br>
+            <input type="checkbox" id="health" name="interests" value="Sağlık">
+            <label for="health">Health</label><br>
+            <input type="checkbox" id="travel" name="interests" value="Seyahat">
+            <label for="travel">Travel</label><br>
+<label> Do you like my website?</label>
+<input type="checkbox" id="tech" name="like" value="yeah">
+            <label for="tech">Yes,I like it</label><br>
+            <input type="checkbox" id="tech" name="like" value="no">
+            <label for="tech">No,I'dont like it</label><br>
+            <label>Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
